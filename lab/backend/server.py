@@ -9,12 +9,29 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+blacklist = [
+    'point_2',
+    'point_21',
+    'point_22',
+    'point_23',
+    'point_26',
+    'point_27',
+    'point_28',
+    'point_29',
+    'point_30',
+    'point_32',
+    'point_50'
+]
+
 with open('data.json', 'r') as fd:
-    # data = {row['id']: row for row in json.loads(fd.read())['rows']}
-    data = json.loads(fd.read())['rows']
+    data = {
+        row['id']: row for row in json.loads(fd.read())['rows']
+        if row['id'] not in blacklist
+    }
 
 
 def get_point_of_interest_from_row(row):
+
     id = row['id']
     name = row['value']['name']['en']
     description = row['value']['description']['text']['en']
@@ -50,14 +67,14 @@ def get_point_of_interest_from_row(row):
     restrictions_open_sunday = row['value']['restrictions']['open_sunday'] == 'Y'
 
     # our own stuff
-    user_walking_distance = row['value'].get('user', {}).get('walking_distance', random.random())
-    user_favorited = row['value'].get('user', {}).get('favorited', False)
+    user_walking_distance = row['value']['user']['walking_distance']
+    user_favorited = row['value']['user']['favorited']
+
+    short_description = '. '.join(row['value']['description']['text']['en'].split('.')[:1])
 
     # TODO
-    # - walking or bus
     # - reviews
     # - videos
-    # - short description
 
     return PointOfInterest(
         id=id,
@@ -83,7 +100,25 @@ def get_point_of_interest_from_row(row):
         restrictions_open_sunday=restrictions_open_sunday,
         user_walking_distance=user_walking_distance,
         user_favorited=user_favorited,
+        short_description=short_description,
     )
+
+
+def get_point_of_interest_row(id):
+    row = data.get(id)
+
+    if not row:
+        return None
+
+    return get_point_of_interest_from_row(row)
+
+
+def update_point_of_interest_waiting_time(id, time):
+    data[id]['value']['waiting_time'] = time
+
+
+def update_point_of_interest_user_favorited(id, favorited):
+    data[id]['value']['user']['favorited'] = favorited
 
 
 class PointOfInterest(graphene.ObjectType):
@@ -125,6 +160,7 @@ class PointOfInterest(graphene.ObjectType):
     # our own stuff
     user_walking_distance = graphene.Int()
     user_favorited = graphene.Boolean()
+    short_description = graphene.String()
 
 
 class Query(graphene.ObjectType):
@@ -137,15 +173,44 @@ class Query(graphene.ObjectType):
 
     def resolve_point_of_interest(self, info, id=None, name=None):
         if id:
-            return [get_point_of_interest_from_row(row) for row in data if id in row['id']]
+            return [get_point_of_interest_from_row(row) for row in data.values() if id == row['id']]
 
         if name:
-            return [get_point_of_interest_from_row(row) for row in data if name in row['value']['name']['en']]
+            return [get_point_of_interest_from_row(row) for row in data.values() if name in row['value']['name']['en']]
 
-        return [get_point_of_interest_from_row(row) for row in data]
+        return [get_point_of_interest_from_row(row) for row in data.values()]
 
 
-schema = graphene.Schema(query=Query)
+class UpdatePointOfInterest(graphene.Mutation):
+    class Arguments:
+        id = graphene.String()
+        waiting_time = graphene.Int()
+        user_favorited = graphene.Boolean()
+
+    ok = graphene.Boolean()
+    point_of_interest = graphene.Field(lambda: PointOfInterest)
+
+    def mutate(self, info, id, waiting_time=None, user_favorited=None):
+        ok = True
+
+        try:
+            if waiting_time is not None:
+                update_point_of_interest_waiting_time(id, waiting_time)
+            if user_favorited is not None:
+                update_point_of_interest_user_favorited(id, user_favorited)
+        except:
+            ok = False
+
+        return UpdatePointOfInterest(
+            ok=ok, point_of_interest=get_point_of_interest_row(id)
+        )
+
+
+class Mutation(graphene.ObjectType):
+    update_point_of_interest = UpdatePointOfInterest.Field()
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
 app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=schema, graphiql=True))
 
 

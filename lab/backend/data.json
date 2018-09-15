@@ -6,6 +6,10 @@
       "id": "point_1",
       "key": "point_1",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_1",
         "_rev": "21-051e96a9407c0cbba1c9e9085f1eeb78",
         "code": "U001",
@@ -80,7 +84,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "10-b1b42c660dd8816f5985a97ead34c326",
           "9-6eef60f825cddf2fcad94112584582fe"
@@ -111,6 +115,10 @@
       "id": "point_11",
       "key": "point_11",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 0
+        },
         "_id": "point_11",
         "_rev": "24-4cb751898513b96d61a2eec672015ac3",
         "code": "U002",
@@ -185,7 +193,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 60,
         "_deleted_conflicts": [
           "8-fe514c773c6a0b98bb781b941c9db3e9"
         ],
@@ -215,6 +223,10 @@
       "id": "point_12",
       "key": "point_12",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_12",
         "_rev": "28-0fdba25ad6d01d2c3ec6c3fac65506e6",
         "code": "U003",
@@ -289,7 +301,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "8-9c1850d9e8398b036dd0871455ec2d18"
         ],
@@ -319,6 +331,10 @@
       "id": "point_13",
       "key": "point_13",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 30
+        },
         "_id": "point_13",
         "_rev": "3-56223c1e01c53937ae3f22d3b88d8b53",
         "code": "S010",
@@ -417,6 +433,10 @@
       "id": "point_14",
       "key": "point_14",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_14",
         "_rev": "3-d8c782bf29603de04c7d758a59b6cbe1",
         "code": "S011",
@@ -490,7 +510,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 25,
         "_deleted_conflicts": [
           "9-adaab125ef06a1a23a44e4b8f200f7ea",
           "7-032d05d1697d7bff0d69c755bc0fb0c0"
@@ -515,6 +535,10 @@
       "id": "point_15",
       "key": "point_15",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_15",
         "_rev": "3-e0932966ee318fb6fc238cdd797fddd1",
         "code": "S012",
@@ -588,7 +612,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": 5,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "9-acd05b5fb76b6b013a175a2352f8fe12",
           "7-dcf90083501e9e2781d1cb6447e7fe4d"
@@ -613,6 +637,10 @@
       "id": "point_16",
       "key": "point_16",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_16",
         "_rev": "6-05bc4f1a685a068595807b52ac9ac6af",
         "code": "S013",
@@ -686,7 +714,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "9-6bf70478a18cd1411cf76f68a33da057",
           "7-8ccb1e5bc2cf6ef988307c2f75349fa6"
@@ -711,6 +739,10 @@
       "id": "point_17",
       "key": "point_17",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_17",
         "_rev": "3-b2faabf19383d6c08ed0e832fb8c093d",
         "code": "S014",
@@ -809,6 +841,10 @@
       "id": "point_2",
       "key": "point_2",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_2",
         "_rev": "4-d16652c8afe0307ed3562e2d0cf6884a",
         "code": "S002",
@@ -882,7 +918,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "2-1fb661399a5ef065361491dd18788de7"
         ]
@@ -892,6 +928,10 @@
       "id": "point_21",
       "key": "point_21",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_21",
         "_rev": "4-824d35c03af5a6c2f07cbe883ef2b841",
         "code": "R001",
@@ -975,6 +1015,10 @@
       "id": "point_22",
       "key": "point_22",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_22",
         "_rev": "4-4d77695290777497d32a834201003899",
         "code": "R002",
@@ -1048,7 +1092,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "2-617a2f0adcf78b4f33887b2801253c6a"
         ]
@@ -1058,6 +1102,10 @@
       "id": "point_23",
       "key": "point_23",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_23",
         "_rev": "4-e3f5c5b015d7f240f99cfb01116802d2",
         "code": "R003",
@@ -1131,7 +1179,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "2-196abf8cdaebd0d369b092b94829e91a"
         ]
@@ -1141,6 +1189,10 @@
       "id": "point_26",
       "key": "point_26",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_26",
         "_rev": "4-e87cacb1ad704ce983f103610f5fbcf9",
         "code": "C001",
@@ -1214,7 +1266,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "2-4e71fa371a51502e9b8ac0746c4990d2"
         ]
@@ -1224,6 +1276,10 @@
       "id": "point_27",
       "key": "point_27",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_27",
         "_rev": "4-f297c13629a62db481d576f3e90f78c8",
         "code": "A001",
@@ -1297,7 +1353,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "2-a5b5a708f9b88b1e78a9853dd8c2864a"
         ]
@@ -1307,6 +1363,10 @@
       "id": "point_28",
       "key": "point_28",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_28",
         "_rev": "4-1e8a047bdfe63b30fd7cd6adbd1afdd0",
         "code": "M001",
@@ -1390,6 +1450,10 @@
       "id": "point_29",
       "key": "point_29",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_29",
         "_rev": "4-0e704cfd196f0edcec587a2406a1db50",
         "code": "I001",
@@ -1463,7 +1527,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "2-1c863a3b8f2fc7eac5c47141fc0b24ba"
         ]
@@ -1473,6 +1537,10 @@
       "id": "point_30",
       "key": "point_30",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_30",
         "_rev": "4-9a86a055bf09919b32fb8d668addc035",
         "code": "S003",
@@ -1546,7 +1614,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "2-28c1b6687b83e8113b2369981edbd6b5"
         ]
@@ -1556,6 +1624,10 @@
       "id": "point_32",
       "key": "point_32",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_32",
         "_rev": "4-1c731ccbea0ba136240ae07b98913bd5",
         "code": "T001",
@@ -1629,7 +1701,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "2-27c081b08e94c5528063cd33a799266f"
         ]
@@ -1639,6 +1711,10 @@
       "id": "point_33",
       "key": "point_33",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_33",
         "_rev": "3-981585dfe72863516537bd2d61722c83",
         "code": "S016",
@@ -1712,7 +1788,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "9-1ec0dd257fea9ba5dfdb6f879f1c1a5a",
           "7-d5b2d218c48a3f351a2adee6fd6a6b0b"
@@ -1737,6 +1813,10 @@
       "id": "point_34",
       "key": "point_34",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_34",
         "_rev": "3-b7f17b4d2acbda371b5dd08b415cbd67",
         "code": "S017",
@@ -1810,7 +1890,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "9-1ffd1dfea1ca950fb8f91f624fd29493",
           "7-df417678c48a76020a383b41039248a8"
@@ -1835,6 +1915,10 @@
       "id": "point_35",
       "key": "point_35",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 30
+        },
         "_id": "point_35",
         "_rev": "3-ff8122664c713e873c72b3a37cd59fe5",
         "code": "S018",
@@ -1908,7 +1992,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "9-d75726d096bff5e241b27d3d31f8095d",
           "7-e884b2940f4b4f022b2e76cc18be01c8"
@@ -1933,6 +2017,10 @@
       "id": "point_36",
       "key": "point_36",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_36",
         "_rev": "3-98cdf87a6a8d4638753dd67778e0e57d",
         "code": "S019",
@@ -2006,7 +2094,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "9-65a3633f758372f4485e17802439933a",
           "7-264dc4e5ed25cbf880a02f01601c5518"
@@ -2031,6 +2119,10 @@
       "id": "point_37",
       "key": "point_37",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_37",
         "_rev": "3-3a425682b73eb0b4ede2794a2ba6e375",
         "code": "S020",
@@ -2104,7 +2196,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "9-6ff1d049074a0ee4602f3d4a24756b0c",
           "7-fd417ef881ccd54831827c9be6f2510e"
@@ -2129,6 +2221,10 @@
       "id": "point_38",
       "key": "point_38",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_38",
         "_rev": "6-e9a06f50643bcc3e962af1ee5b557a6f",
         "code": "S021",
@@ -2202,7 +2298,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "9-2542d341cd565bbdd8d26eb827b51c53",
           "7-865803158e9eb7e94ed0678798a29387"
@@ -2227,6 +2323,10 @@
       "id": "point_39",
       "key": "point_39",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_39",
         "_rev": "6-95f16ae461cc8590a3e66a46f8b5183b",
         "code": "S022",
@@ -2300,7 +2400,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "9-1e46a057a81c32d1f32a8ebf93921dd8",
           "7-6946ae370e2583b195c0159dff44c045"
@@ -2325,6 +2425,10 @@
       "id": "point_40",
       "key": "point_40",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 5
+        },
         "_id": "point_40",
         "_rev": "12-eb1d64b9d2168c2be837699db8ce0bf6",
         "code": "S023",
@@ -2398,7 +2502,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "2-abb2652a993317a0ec169dc5fb7d63eb"
         ],
@@ -2422,6 +2526,10 @@
       "id": "point_41",
       "key": "point_41",
       "value": {
+      "user": {
+        "favorited": false,
+        "walking_distance": 40
+      },
         "_id": "point_41",
         "_rev": "3-d166ef923653d222f3141b3973986f13",
         "code": "S024",
@@ -2495,7 +2603,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "9-a5a0d303a7eb67508619819dadab2bd6",
           "7-68aa2f863fdb9de053c304c92c726893"
@@ -2520,6 +2628,10 @@
       "id": "point_42",
       "key": "point_42",
       "value": {
+      "user": {
+        "favorited": false,
+        "walking_distance": 50
+      },
         "_id": "point_42",
         "_rev": "3-e9f6aea6ae9374d5fa75339c23ce99f9",
         "code": "S025",
@@ -2593,7 +2705,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "9-a5b8ff42eef8b1f950ee49047449f28b",
           "7-df811e317fc343689fb1600204d25b43"
@@ -2618,6 +2730,10 @@
       "id": "point_43",
       "key": "point_43",
       "value": {
+      "user": {
+        "favorited": false,
+        "walking_distance": 15
+      },
         "_id": "point_43",
         "_rev": "3-b9aee4037bd8742d42cdce6aa419f9d4",
         "code": "S026",
@@ -2691,7 +2807,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "9-059ccadcb5b7ee8e6a27ae6a01582c8a",
           "7-08ffe06e36685ac72aa9e3733c0a0659"
@@ -2716,6 +2832,10 @@
       "id": "point_44",
       "key": "point_44",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_44",
         "_rev": "3-b9f58628868f4e95b910e52cfce95c84",
         "code": "S027",
@@ -2789,7 +2909,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "9-3ccd2efb09aaaa6879954f8ad1b4fd02",
           "7-8fe101f926d297abd6b92743bbe36d0e"
@@ -2814,6 +2934,10 @@
       "id": "point_45",
       "key": "point_45",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_45",
         "_rev": "6-1146d39dce49fef833f19e06976abf52",
         "code": "S028",
@@ -2887,7 +3011,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "9-2aaeed0c559b75bfa57a64515d8a2f05",
           "7-112372eff166380c09954893b96b87e1"
@@ -2912,6 +3036,10 @@
       "id": "point_46",
       "key": "point_46",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 50
+        },
         "_id": "point_46",
         "_rev": "6-680007d314cde33cb35869a2f22cde9d",
         "code": "S029",
@@ -2985,7 +3113,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "9-e58a494ebff417efa052adfa320fb042",
           "7-a721e021ce828883ae10ff73742d8911"
@@ -3010,6 +3138,10 @@
       "id": "point_48",
       "key": "point_48",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 40
+        },
         "_id": "point_48",
         "_rev": "3-9e9ab6d6bf7cc4bdb184b85bfd213e75",
         "code": "S030",
@@ -3083,7 +3215,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 0,
         "_deleted_conflicts": [
           "9-98e0daf284bc1daca09933853c14ab50",
           "7-0c3bc7efac5306fbe0daae95c001e059"
@@ -3108,6 +3240,10 @@
       "id": "point_49",
       "key": "point_49",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_49",
         "_rev": "17-25d0254d0465a36fe84ee9068bbbdfc6",
         "code": "S031",
@@ -3181,7 +3317,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 0,
         "_deleted_conflicts": [
           "7-3a56d1bc51a66cea629d1ffc648cd01d"
         ],
@@ -3205,6 +3341,10 @@
       "id": "point_50",
       "key": "point_50",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 50
+        },
         "_id": "point_50",
         "_rev": "4-5336d65cb495f45197ab59e038c383f3",
         "code": "S032",
@@ -3278,7 +3418,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "2-aaf7bc016660e5c54a2c629db65f5271"
         ]
@@ -3288,6 +3428,10 @@
       "id": "point_51",
       "key": "point_51",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_51",
         "_rev": "17-9b9e5d163c5c98b79cfe1c673a960d01",
         "code": "S033",
@@ -3361,7 +3505,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "7-db5196ff5ed9aa3797246d6bd4dc2164"
         ],
@@ -3385,6 +3529,10 @@
       "id": "point_52",
       "key": "point_52",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_52",
         "_rev": "14-f814ec9f98f551329e8d3ef0bdbcabac",
         "code": "S034",
@@ -3458,7 +3606,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "7-58d8d390a6bcd3b2220e0dc70c96247b"
         ],
@@ -3482,6 +3630,10 @@
       "id": "point_53",
       "key": "point_53",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 25
+        },
         "_id": "point_53",
         "_rev": "16-9bf436cd09a68071e28fc567b2fd800b",
         "code": "S035",
@@ -3555,7 +3707,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "2-0cad27d52fc6916e852a3412696f06f9"
         ],
@@ -3579,6 +3731,10 @@
       "id": "point_54",
       "key": "point_54",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 24
+        },
         "_id": "point_54",
         "_rev": "14-1a3ab9bd87959f0ae669f57a7ba7f4e5",
         "code": "S036",
@@ -3652,7 +3808,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "7-1181686aa1d9f32fbdedef529273e13a"
         ],
@@ -3676,6 +3832,10 @@
       "id": "point_55",
       "key": "point_55",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 35
+        },
         "_id": "point_55",
         "_rev": "6-387d2353485a64c92db59bbbfe245d4c",
         "code": "S037",
@@ -3749,7 +3909,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-d5f8fdbec5579ca9640d056b085ba695",
           "3-980b622121bbe87760d3ed649147bf1d"
@@ -3774,6 +3934,10 @@
       "id": "point_56",
       "key": "point_56",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 26
+        },
         "_id": "point_56",
         "_rev": "14-0fb75c6d82cc5212f50a9a1346585f81",
         "code": "S038",
@@ -3847,7 +4011,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 30,
         "_deleted_conflicts": [
           "7-5a75b03729e481b3774f59c36b283462"
         ],
@@ -3871,6 +4035,10 @@
       "id": "point_57",
       "key": "point_57",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_57",
         "_rev": "14-5f38d5d81d7888c79bc546f7a0a96754",
         "code": "S039",
@@ -3944,7 +4112,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "7-12a2051df4162bdb0de541152174e0d4"
         ],
@@ -3968,6 +4136,10 @@
       "id": "point_58",
       "key": "point_58",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_58",
         "_rev": "6-888b37bb7cfde19c8abf3ddf8123f647",
         "code": "S040",
@@ -4041,7 +4213,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "7-8c27b07a688d0de76c7669992feb735e",
           "3-f84bba0227361f97616b05d718a86c2a"
@@ -4066,6 +4238,10 @@
       "id": "point_59",
       "key": "point_59",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_59",
         "_rev": "14-f01e70b0c358ce8a8a6bb80941e08c60",
         "code": "S041",
@@ -4139,7 +4315,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "7-8507e93f62d57f0dc3a09c3c2ca0f486"
         ],
@@ -4163,6 +4339,10 @@
       "id": "point_61",
       "key": "point_61",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_61",
         "_rev": "22-bc22f0e48d21fdedec356d4917fca6f4",
         "code": "U004",
@@ -4236,7 +4416,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-98baf1439d8081107d837a007999322e"
         ],
@@ -4266,6 +4446,10 @@
       "id": "point_62",
       "key": "point_62",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 40
+        },
         "_id": "point_62",
         "_rev": "25-10f390433bcfe0db9e88ef91cb7e4c28",
         "code": "U005",
@@ -4339,7 +4523,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-0e9b7f746207f344ce170f9f7fa5647f"
         ],
@@ -4369,6 +4553,10 @@
       "id": "point_63",
       "key": "point_63",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_63",
         "_rev": "16-e7d283c9f2d4a1fdc9de256712d77f0f",
         "code": "S042",
@@ -4442,7 +4630,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 20,
         "_deleted_conflicts": [
           "5-8793209d4d75d7b71bf0a578f8ad4a08"
         ],
@@ -4466,6 +4654,10 @@
       "id": "point_64",
       "key": "point_64",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_64",
         "_rev": "3-d97b917654ef9d60e185d309c2dcb56b",
         "code": "S043",
@@ -4539,7 +4731,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 0,
         "_deleted_conflicts": [
           "9-3ec5c79577224090b65b93c3d1bb343c",
           "7-d19254546bd8437b38017414bea95391"
@@ -4564,6 +4756,10 @@
       "id": "point_65",
       "key": "point_65",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_65",
         "_rev": "3-25267b4aed012241a39522fe6775b76c",
         "code": "S044",
@@ -4637,7 +4833,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 0,
         "_deleted_conflicts": [
           "9-797ec42d9df130d26a2a34f232f456fd",
           "7-0b0f9f5a21577f7f0291e4a9d0916552"
@@ -4662,6 +4858,10 @@
       "id": "point_66",
       "key": "point_66",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_66",
         "_rev": "4-e86b44bc6f2c8ffbbb10aec6b1729abf",
         "code": "S045",
@@ -4735,7 +4935,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 0,
         "_deleted_conflicts": [
           "2-b853c10e8d942a0b2785a3e247324ba9"
         ]
@@ -4745,6 +4945,10 @@
       "id": "point_67",
       "key": "point_67",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_67",
         "_rev": "4-8b27b291d5738ac84c7ba60bb495ca89",
         "code": "S046",
@@ -4818,7 +5022,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 10,
         "_deleted_conflicts": [
           "2-8edf0ce8f9cd05d4a145c3485692b8c2"
         ]
@@ -4828,6 +5032,10 @@
       "id": "point_68",
       "key": "point_68",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 50
+        },
         "_id": "point_68",
         "_rev": "25-ce8b709cb0ad5f4cc84606e53ff95a83",
         "code": "U006",
@@ -4901,7 +5109,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 5,
         "_deleted_conflicts": [
           "7-80793b9ab0848748c404e39e17bd6124"
         ],
@@ -4931,6 +5139,10 @@
       "id": "point_69",
       "key": "point_69",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 15
+        },
         "_id": "point_69",
         "_rev": "6-66af3f884264928a0f8984ad2a4a3529",
         "code": "S009",
@@ -5004,7 +5216,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-504b5c58e733b0b88669728a0b63bd84",
           "3-0d2642559c522ee6bfc47740ae819877"
@@ -5029,6 +5241,10 @@
       "id": "point_70",
       "key": "point_70",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 20
+        },
         "_id": "point_70",
         "_rev": "6-69f971f79ca2421fb947ff1a87dab40f",
         "code": "S008",
@@ -5102,7 +5318,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-7d3cfead540eda1c2a8a4c0c28331905",
           "3-cdb44cd27e77f55662a542ec0fc143ea"
@@ -5127,6 +5343,10 @@
       "id": "point_71",
       "key": "point_71",
       "value": {
+        "user": {
+          "favorited": false,
+          "walking_distance": 10
+        },
         "_id": "point_71",
         "_rev": "14-052c8775c446e3f0f9c7ace97d895d2a",
         "code": "U007",
@@ -5200,7 +5420,7 @@
           "fr": null,
           "en": null
         },
-        "waiting_time": null,
+        "waiting_time": 15,
         "_deleted_conflicts": [
           "7-7d88a61dd3cda3858d10a1684ea1d476"
         ],
