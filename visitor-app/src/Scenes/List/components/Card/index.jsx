@@ -47,25 +47,28 @@ const CardComponent = (props) => {
   return (
     <div className={classes.cardWrapper}>
       <Card className={classes.card}>
-        <CardActionArea>
-          { poi.image1 && <CardMedia
-              component="img"
-              className={classes.media}
-              height="140"
-              image={poi.image1}
-              title={poi.name}
-            />
 
-          }
-          <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
-              {poi.name}
-            </Typography>
-            <Typography component="p">
-              {poi.shortDescription}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        <Link to={`/detail/${poi.id}`}>
+          <CardActionArea>
+            { poi.image1 && <CardMedia
+                component="img"
+                className={classes.media}
+                height="140"
+                image={poi.image1}
+                title={poi.name}
+              />
+
+            }
+            <CardContent>
+              <Typography gutterBottom variant="headline" component="h2">
+                {poi.name}
+              </Typography>
+              <Typography component="p">
+                {poi.shortDescription}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Link>
         <CardContent>
           <Typography component="p">
             -- {poi.id}
