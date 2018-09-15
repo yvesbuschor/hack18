@@ -1,0 +1,7 @@
+{
+  "runtime": {
+    "majorVersion": "3.6.0"
+  },
+  "command": "cd build && python -m http.server --bind-address 0.0.0.0 8084",
+  "notes": "Visitor & Companion App"
+}
