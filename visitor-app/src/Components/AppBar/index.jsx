@@ -7,7 +7,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import FilterListIcon from '@material-ui/icons/FilterList';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import withDrawer from 'Components/withDrawer';
@@ -23,6 +27,10 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
+  },
+  rightMenuButton: {
+    marginRight: -12,
+    marginLeft: 20,
   },
 };
 
@@ -53,8 +61,12 @@ class AppBarComponent extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Favorites only</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>Filter</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>
+          <ListItemIcon className={classes.icon}>
+            <RadioButtonUncheckedIcon />
+          </ListItemIcon>
+          <ListItemText inset primary="Favorites only" />
+        </MenuItem>
       </Menu>
     );
 
@@ -69,8 +81,8 @@ class AppBarComponent extends React.Component {
               <Link to={routes.root}>CERN Open Days</Link>
             </Typography>
             {withSecondaryMenu && (
-              <IconButton className={classes.menuButton} color="inherit" onClick={this.handleMenuOpen}>
-                <MoreVertIcon />
+              <IconButton className={classes.rightMenuButton} color="inherit" onClick={this.handleMenuOpen}>
+                <FilterListIcon />
               </IconButton>
             )}
           </Toolbar>

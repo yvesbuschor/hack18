@@ -32,7 +32,7 @@ const ListView = (props) => (
         pointOfInterest {
           id
           name
-          description
+          shortDescription
           image1
           estimatedActivityTime
           userWalkingDistance

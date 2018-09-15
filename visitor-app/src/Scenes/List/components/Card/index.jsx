@@ -28,7 +28,12 @@ const styles = {
   card: {
     width: '100%',
     maxWidth: '850px',
-    margin: '12px',
+    boxSizing: 'border-box',
+  },
+  cardWrapper: {
+    width: '100%',
+    padding: '12px',
+    boxSizing: 'border-box',
   },
   media: {
     // ⚠️ object-fit is not supported by IE11.
@@ -40,39 +45,41 @@ const styles = {
 const CardComponent = (props) => {
   const { classes, poi } = props;
   return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        { poi.image1 && <CardMedia
-            component="img"
-            className={classes.media}
-            height="140"
-            image={poi.image1}
-            title={poi.name}
-          />
+    <div className={classes.cardWrapper}>
+      <Card className={classes.card}>
+        <CardActionArea>
+          { poi.image1 && <CardMedia
+              component="img"
+              className={classes.media}
+              height="140"
+              image={poi.image1}
+              title={poi.name}
+            />
 
-        }
+          }
+          <CardContent>
+            <Typography gutterBottom variant="headline" component="h2">
+              {poi.name}
+            </Typography>
+            <Typography component="p">
+              {poi.shortDescription}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {poi.name}
-          </Typography>
           <Typography component="p">
-            {poi.description}
+            -- {poi.id}
+            -- {poi.waitingTime}
+            -- FAV: {poi.userFavorited.toString()}
           </Typography>
         </CardContent>
-      </CardActionArea>
-      <CardContent>
-        <Typography component="p">
-          -- {poi.id}
-          -- {poi.waitingTime}
-          -- FAV: {poi.userFavorited.toString()}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+        </CardActions>
+      </Card>
+    </div>
   );
 };
 
