@@ -9,6 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
+import UpdateIcon from '@material-ui/icons/Update';
 
 /* **
 /* PROPS:
@@ -17,7 +19,7 @@ import Typography from '@material-ui/core/Typography';
 /*   name
 /*   shortDescription
 /*   image
-/*   estimatesActivityTime
+/*   estimatedActivityTime
 /*   userWalkingDistance
 /*   userFavorited
 /*   waitingTime
@@ -34,11 +36,24 @@ const styles = {
     width: '100%',
     padding: '12px',
     boxSizing: 'border-box',
+    display: 'flex',
+    justifyContent: 'center',
   },
   media: {
     // ⚠️ object-fit is not supported by IE11.
     objectFit: 'cover',
   },
+  link: {
+    color: 'inherit',
+    textDecoration: 'none',
+  },
+  bottomInfo: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  infoWrapper: {
+    flex: 1,
+  }
 };
 
 
@@ -48,7 +63,7 @@ const CardComponent = (props) => {
     <div className={classes.cardWrapper}>
       <Card className={classes.card}>
 
-        <Link to={`/detail/${poi.id}`}>
+        <Link to={`/detail/${poi.id}`} className={classes.link}>
           <CardActionArea>
             { poi.image1 && <CardMedia
                 component="img"
@@ -57,7 +72,6 @@ const CardComponent = (props) => {
                 image={poi.image1}
                 title={poi.name}
               />
-
             }
             <CardContent>
               <Typography gutterBottom variant="headline" component="h2">
@@ -66,15 +80,26 @@ const CardComponent = (props) => {
               <Typography component="p">
                 {poi.shortDescription}
               </Typography>
+              <Typography component="p">
+                -- {poi.id}
+                -- {poi.waitingTime}
+                -- FAV: {poi.userFavorited.toString()}
+              </Typography>
             </CardContent>
           </CardActionArea>
         </Link>
-        <CardContent>
-          <Typography component="p">
-            -- {poi.id}
-            -- {poi.waitingTime}
-            -- FAV: {poi.userFavorited.toString()}
-          </Typography>
+        <CardContent className={classes.bottomInfo}>
+          <div className={classes.infoWrapper} >
+            <DirectionsWalkIcon /> {poi.userWalkingDistance} min
+          </div>
+          {!!poi.estimatedActivityTime && (
+            <div className={classes.infoWrapper} >
+              <UpdateIcon /> {poi.estimatedActivityTime} min
+            </div>
+          )}
+          <div className={classes.infoWrapper} >
+            <UpdateIcon /> {poi.waitingTime} min
+          </div>
         </CardContent>
         <CardActions>
           <Button size="small" color="primary">

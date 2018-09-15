@@ -10,10 +10,10 @@ const Playground = () => (
     <Card>
       <CardContent>
         <h1>PLAYGROUND</h1>
-        <WaitingTimeIcon count={0} />
-        <WaitingTimeIcon count={1} />
-        <WaitingTimeIcon count={2} />
-        <WaitingTimeIcon count={3} />
+        <WaitingTimeIcon time={3} />
+        <WaitingTimeIcon time={10} />
+        <WaitingTimeIcon time={20} />
+        <WaitingTimeIcon time={45} />
       </CardContent>
     </Card>
   </React.Fragment>
