@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+graphene = ">=2.0"
+pip = "*"
+flask-graphql = "*"
+flask = "*"
+
+[dev-packages]
+ipdb = "*"
+
+[requires]
+python_version = "3.6"
