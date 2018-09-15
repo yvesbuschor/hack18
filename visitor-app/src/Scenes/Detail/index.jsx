@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import routes from 'routes';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import AppBar from '../../Components/AppBar';
+import AppBar from 'Components/AppBar';
 
 
 const DetailView = ({ match }) => {

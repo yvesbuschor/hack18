@@ -34,7 +34,7 @@ export default function withDrawer(WrappedComponent) {
       return (
         <React.Fragment>
           <WrappedComponent {...propsToPass} toggleDrawer={this.toggleDrawer} />
-          <Drawer open={this.state.drawerOpen} onClose={this.toggleDrawer}>
+          <Drawer open={drawerOpen} onClose={this.toggleDrawer}>
             <div
               tabIndex={0}
               role="button"

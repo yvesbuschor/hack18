@@ -10,7 +10,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import withDrawer from '../withDrawer';
+import withDrawer from 'Components/withDrawer';
+import './globalStyle.css';
 
 const styles = {
   root: {
@@ -59,7 +60,7 @@ class AppBarComponent extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="sticky">
+        <AppBar position="fixed">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" onClick={toggleDrawer}>
               <MenuIcon />

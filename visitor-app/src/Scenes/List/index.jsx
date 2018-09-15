@@ -1,39 +1,74 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from 'routes';
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
-import AppBar from '../../Components/AppBar';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
+import { withStyles } from '@material-ui/core/styles';
+import WarningIcon from '@material-ui/icons/Warning';
+import red from '@material-ui/core/colors/red';
+import AppBar from 'Components/AppBar';
+import LoadingBar from 'Components/LoadingBar';
+import Card from './components/Card';
 
 
-const ListView = () => (
+const styles = {
+  error: {
+    color: red[700],
+    display: 'block',
+    padding: '24px',
+    textAlign: 'center',
+  },
+  cardsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }
+};
+
+const ListView = (props) => (
   <Query
     query={gql`
       {
         pointOfInterest {
           id
           name
+          description
+          image1
+          estimatedActivityTime
+          userWalkingDistance
+          userFavorited
+          waitingTime
         }
       }
     `}
+    pollInterval={500}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
-
       return (
         <React.Fragment>
           <AppBar withSecondaryMenu />
-          <p>ListView</p>
-          { data.pointOfInterest.map(({ id, name }) => (
-            <div key={id}>
-              <p>{`${id}: ${name}`}</p>
+          <LoadingBar loading={loading} />
+          {error && (
+            <div className={props.classes.error}>
+              <p>
+                <WarningIcon />
+              </p>
+              <p>
+                Oups!<br />
+                Something went wrong.<br />
+                Maybe check the server!
+              </p>
             </div>
+          )}
+          <div className={props.classes.cardsContainer}>
+          { (!loading && !error) && data.pointOfInterest.map((poi) => (
+            <Card key={poi.id} poi={poi} />
           ))}
+          </div>
         </React.Fragment>
       )
     }}
   </Query>
 );
 
-export default ListView;
+export default withStyles(styles)(ListView);
