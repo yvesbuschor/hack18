@@ -8,6 +8,7 @@ graphene = ">=2.0"
 pip = "*"
 flask-graphql = "*"
 flask = "*"
+flask-cors = "*"
 
 [dev-packages]
 ipdb = "*"

@@ -1,10 +1,13 @@
+import os
 import random
 import json
 import graphene
 from flask_graphql import GraphQLView
 from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 with open('data.json', 'r') as fd:
     # data = {row['id']: row for row in json.loads(fd.read())['rows']}
@@ -145,7 +148,14 @@ class Query(graphene.ObjectType):
 schema = graphene.Schema(query=Query)
 app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=schema, graphiql=True))
 
+
+@app.route("/")
+def health():
+    return "Hello World!"
+
+
 # Optional, for adding batch query support (used in Apollo-Client)
 # app.add_url_rule('/graphql/batch', view_func=GraphQLView.as_view('graphql', schema=schema, batch=True))
 
-app.run()
+port = int(os.environ.get('PORT', 8084))
+app.run(host='0.0.0.0', port=port)
