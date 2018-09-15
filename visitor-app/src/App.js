@@ -1,18 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routes from 'routes';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 
 import Playground from './Scenes/Playground';
 import List from './Scenes/List';
 import Detail from './Scenes/Detail';
 
+const client = new ApolloClient({
+  uri: "http://0.0.0.0:8084/graphql"
+});
+
 const App = () => (
   <Router>
-    <React.Fragment>
+    <ApolloProvider client={client}>
       <Route exact path={routes.root} component={List}/>
       <Route path={routes.playground} component={Playground}/>
       <Route path={routes.detail} component={Detail}/>
-    </React.Fragment>
+    </ApolloProvider>
   </Router>
 );
 

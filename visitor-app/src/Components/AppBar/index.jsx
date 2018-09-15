@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import withDrawer from '../withDrawer';
 
 const styles = {
   root: {
@@ -40,7 +41,7 @@ class AppBarComponent extends React.Component {
 
   render() {
     const { anchorEl } = this.state;
-    const { classes, withSecondaryMenu = false } = this.props;
+    const { classes, toggleDrawer, withSecondaryMenu = false } = this.props;
     const isMenuOpen = Boolean(anchorEl);
 
     const renderMenu = (
@@ -60,7 +61,7 @@ class AppBarComponent extends React.Component {
       <div className={classes.root}>
         <AppBar position="sticky">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit">
+            <IconButton className={classes.menuButton} color="inherit" onClick={toggleDrawer}>
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.grow}>
@@ -79,4 +80,5 @@ class AppBarComponent extends React.Component {
   }
 }
 
-export default withStyles(styles)(AppBarComponent);
+const Styled = withStyles(styles)(AppBarComponent);
+export default withDrawer(Styled);
