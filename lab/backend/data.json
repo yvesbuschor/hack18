@@ -8,7 +8,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_1",
         "_rev": "21-051e96a9407c0cbba1c9e9085f1eeb78",
@@ -117,7 +118,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 0
+          "walking_distance": 0,
+          "review": []
         },
         "_id": "point_11",
         "_rev": "24-4cb751898513b96d61a2eec672015ac3",
@@ -225,7 +227,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_12",
         "_rev": "28-0fdba25ad6d01d2c3ec6c3fac65506e6",
@@ -333,7 +336,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 30
+          "walking_distance": 30,
+          "review": []
         },
         "_id": "point_13",
         "_rev": "3-56223c1e01c53937ae3f22d3b88d8b53",
@@ -435,7 +439,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_14",
         "_rev": "3-d8c782bf29603de04c7d758a59b6cbe1",
@@ -537,7 +542,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_15",
         "_rev": "3-e0932966ee318fb6fc238cdd797fddd1",
@@ -639,7 +645,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_16",
         "_rev": "6-05bc4f1a685a068595807b52ac9ac6af",
@@ -741,7 +748,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+          "review": []
         },
         "_id": "point_17",
         "_rev": "3-b2faabf19383d6c08ed0e832fb8c093d",
@@ -843,7 +851,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_2",
         "_rev": "4-d16652c8afe0307ed3562e2d0cf6884a",
@@ -930,7 +939,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_21",
         "_rev": "4-824d35c03af5a6c2f07cbe883ef2b841",
@@ -1017,7 +1027,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_22",
         "_rev": "4-4d77695290777497d32a834201003899",
@@ -1104,7 +1115,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_23",
         "_rev": "4-e3f5c5b015d7f240f99cfb01116802d2",
@@ -1191,7 +1203,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_26",
         "_rev": "4-e87cacb1ad704ce983f103610f5fbcf9",
@@ -1278,7 +1291,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_27",
         "_rev": "4-f297c13629a62db481d576f3e90f78c8",
@@ -1365,7 +1379,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_28",
         "_rev": "4-1e8a047bdfe63b30fd7cd6adbd1afdd0",
@@ -1452,7 +1467,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_29",
         "_rev": "4-0e704cfd196f0edcec587a2406a1db50",
@@ -1539,7 +1555,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_30",
         "_rev": "4-9a86a055bf09919b32fb8d668addc035",
@@ -1626,7 +1643,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_32",
         "_rev": "4-1c731ccbea0ba136240ae07b98913bd5",
@@ -1713,7 +1731,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_33",
         "_rev": "3-981585dfe72863516537bd2d61722c83",
@@ -1815,7 +1834,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+          "review": []
         },
         "_id": "point_34",
         "_rev": "3-b7f17b4d2acbda371b5dd08b415cbd67",
@@ -1917,7 +1937,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 30
+          "walking_distance": 30,
+          "review": []
         },
         "_id": "point_35",
         "_rev": "3-ff8122664c713e873c72b3a37cd59fe5",
@@ -2019,7 +2040,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+          "review": []
         },
         "_id": "point_36",
         "_rev": "3-98cdf87a6a8d4638753dd67778e0e57d",
@@ -2121,7 +2143,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_37",
         "_rev": "3-3a425682b73eb0b4ede2794a2ba6e375",
@@ -2223,7 +2246,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_38",
         "_rev": "6-e9a06f50643bcc3e962af1ee5b557a6f",
@@ -2325,7 +2349,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_39",
         "_rev": "6-95f16ae461cc8590a3e66a46f8b5183b",
@@ -2427,7 +2452,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 5
+          "walking_distance": 5,
+          "review": []
         },
         "_id": "point_40",
         "_rev": "12-eb1d64b9d2168c2be837699db8ce0bf6",
@@ -2528,7 +2554,8 @@
       "value": {
       "user": {
         "favorited": false,
-        "walking_distance": 40
+        "walking_distance": 40,
+          "review": []
       },
         "_id": "point_41",
         "_rev": "3-d166ef923653d222f3141b3973986f13",
@@ -2630,7 +2657,8 @@
       "value": {
       "user": {
         "favorited": false,
-        "walking_distance": 50
+        "walking_distance": 50,
+          "review": []
       },
         "_id": "point_42",
         "_rev": "3-e9f6aea6ae9374d5fa75339c23ce99f9",
@@ -2732,7 +2760,8 @@
       "value": {
       "user": {
         "favorited": false,
-        "walking_distance": 15
+        "walking_distance": 15,
+        "review": []
       },
         "_id": "point_43",
         "_rev": "3-b9aee4037bd8742d42cdce6aa419f9d4",
@@ -2834,7 +2863,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+        "review": []
         },
         "_id": "point_44",
         "_rev": "3-b9f58628868f4e95b910e52cfce95c84",
@@ -2936,7 +2966,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+        "review": []
         },
         "_id": "point_45",
         "_rev": "6-1146d39dce49fef833f19e06976abf52",
@@ -3038,7 +3069,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 50
+          "walking_distance": 50,
+        "review": []
         },
         "_id": "point_46",
         "_rev": "6-680007d314cde33cb35869a2f22cde9d",
@@ -3140,7 +3172,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 40
+          "walking_distance": 40,
+          "review": []
         },
         "_id": "point_48",
         "_rev": "3-9e9ab6d6bf7cc4bdb184b85bfd213e75",
@@ -3242,7 +3275,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_49",
         "_rev": "17-25d0254d0465a36fe84ee9068bbbdfc6",
@@ -3343,7 +3377,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 50
+          "walking_distance": 50,
+          "review": []
         },
         "_id": "point_50",
         "_rev": "4-5336d65cb495f45197ab59e038c383f3",
@@ -3430,7 +3465,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_51",
         "_rev": "17-9b9e5d163c5c98b79cfe1c673a960d01",
@@ -3531,7 +3567,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_52",
         "_rev": "14-f814ec9f98f551329e8d3ef0bdbcabac",
@@ -3632,7 +3669,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 25
+          "walking_distance": 25,
+          "review": []
         },
         "_id": "point_53",
         "_rev": "16-9bf436cd09a68071e28fc567b2fd800b",
@@ -3733,7 +3771,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 24
+          "walking_distance": 24,
+          "review": []
         },
         "_id": "point_54",
         "_rev": "14-1a3ab9bd87959f0ae669f57a7ba7f4e5",
@@ -3834,7 +3873,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 35
+          "walking_distance": 35,
+          "review": []
         },
         "_id": "point_55",
         "_rev": "6-387d2353485a64c92db59bbbfe245d4c",
@@ -3936,7 +3976,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 26
+          "walking_distance": 26,
+          "review": []
         },
         "_id": "point_56",
         "_rev": "14-0fb75c6d82cc5212f50a9a1346585f81",
@@ -4037,7 +4078,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_57",
         "_rev": "14-5f38d5d81d7888c79bc546f7a0a96754",
@@ -4138,7 +4180,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_58",
         "_rev": "6-888b37bb7cfde19c8abf3ddf8123f647",
@@ -4240,7 +4283,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_59",
         "_rev": "14-f01e70b0c358ce8a8a6bb80941e08c60",
@@ -4341,7 +4385,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_61",
         "_rev": "22-bc22f0e48d21fdedec356d4917fca6f4",
@@ -4448,7 +4493,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 40
+          "walking_distance": 40,
+          "review": []
         },
         "_id": "point_62",
         "_rev": "25-10f390433bcfe0db9e88ef91cb7e4c28",
@@ -4555,7 +4601,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_63",
         "_rev": "16-e7d283c9f2d4a1fdc9de256712d77f0f",
@@ -4656,7 +4703,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_64",
         "_rev": "3-d97b917654ef9d60e185d309c2dcb56b",
@@ -4758,7 +4806,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_65",
         "_rev": "3-25267b4aed012241a39522fe6775b76c",
@@ -4860,7 +4909,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+          "review": []
         },
         "_id": "point_66",
         "_rev": "4-e86b44bc6f2c8ffbbb10aec6b1729abf",
@@ -4947,7 +4997,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_67",
         "_rev": "4-8b27b291d5738ac84c7ba60bb495ca89",
@@ -5034,7 +5085,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 50
+          "walking_distance": 50,
+          "review": []
         },
         "_id": "point_68",
         "_rev": "25-ce8b709cb0ad5f4cc84606e53ff95a83",
@@ -5141,7 +5193,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 15
+          "walking_distance": 15,
+          "review": []
         },
         "_id": "point_69",
         "_rev": "6-66af3f884264928a0f8984ad2a4a3529",
@@ -5243,7 +5296,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 20
+          "walking_distance": 20,
+          "review": []
         },
         "_id": "point_70",
         "_rev": "6-69f971f79ca2421fb947ff1a87dab40f",
@@ -5345,7 +5399,8 @@
       "value": {
         "user": {
           "favorited": false,
-          "walking_distance": 10
+          "walking_distance": 10,
+          "review": []
         },
         "_id": "point_71",
         "_rev": "14-052c8775c446e3f0f9c7ace97d895d2a",

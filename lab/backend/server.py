@@ -1,7 +1,7 @@
 import os
-import random
 import json
 import graphene
+from datetime import datetime
 from flask_graphql import GraphQLView
 from flask import Flask
 from flask_cors import CORS
@@ -72,8 +72,12 @@ def get_point_of_interest_from_row(row):
 
     short_description = '. '.join(row['value']['description']['text']['en'].split('.')[:1])
 
+    review = [
+        Review(id=r['id'], name=r['name'], text=r['text'], image_url=r['image_url'], stars=r['stars'])
+        for r in row['value']['user']['review']
+    ]
+
     # TODO
-    # - reviews
     # - videos
 
     return PointOfInterest(
@@ -101,6 +105,7 @@ def get_point_of_interest_from_row(row):
         user_walking_distance=user_walking_distance,
         user_favorited=user_favorited,
         short_description=short_description,
+        review=review
     )
 
 
@@ -119,6 +124,16 @@ def update_point_of_interest_waiting_time(id, time):
 
 def update_point_of_interest_user_favorited(id, favorited):
     data[id]['value']['user']['favorited'] = favorited
+
+
+def append_point_of_interest_review(id, review):
+    data[id]['value']['user']['review'].append({
+        'id': review.id,
+        'name': review.name,
+        'image_url': review.image_url,
+        'stars': review.stars,
+        'text': review.text,
+    })
 
 
 class PointOfInterest(graphene.ObjectType):
@@ -161,6 +176,17 @@ class PointOfInterest(graphene.ObjectType):
     user_walking_distance = graphene.Int()
     user_favorited = graphene.Boolean()
     short_description = graphene.String()
+
+    review = graphene.List(lambda: Review)
+
+
+class Review(graphene.ObjectType):
+
+    id = graphene.String()
+    name = graphene.String()
+    image_url = graphene.String()
+    stars = graphene.Int()
+    text = graphene.String()
 
 
 class Query(graphene.ObjectType):
@@ -206,8 +232,27 @@ class UpdatePointOfInterest(graphene.Mutation):
         )
 
 
+class CreateReview(graphene.Mutation):
+    class Arguments:
+        point_id = graphene.String()
+        name = graphene.String()
+        image_url = graphene.String()
+        stars = graphene.Int()
+        text = graphene.String()
+
+    ok = graphene.Boolean()
+    review = graphene.Field(lambda: Review)
+
+    def mutate(self, info, point_id, name, image_url, stars, text):
+        ok = True
+        review = Review(id=str(datetime.now()), name=name, image_url=image_url, stars=stars, text=text)
+        append_point_of_interest_review(point_id, review)
+        return CreateReview(ok=ok, review=review)
+
+
 class Mutation(graphene.ObjectType):
     update_point_of_interest = UpdatePointOfInterest.Field()
+    create_review = CreateReview.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
