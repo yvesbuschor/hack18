@@ -67,6 +67,12 @@ class AppBarComponent extends React.Component {
           </ListItemIcon>
           <ListItemText inset primary="Favorites only" />
         </MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>
+          <ListItemIcon className={classes.icon}>
+            <RadioButtonUncheckedIcon />
+          </ListItemIcon>
+          <ListItemText inset primary="sort by waiting time" />
+        </MenuItem>
       </Menu>
     );
 

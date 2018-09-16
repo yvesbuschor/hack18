@@ -11,6 +11,10 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
 import UpdateIcon from '@material-ui/icons/Update';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import WaitingTimeIcon from 'Components/WaitingTimeIcon';
+
 
 /* **
 /* PROPS:
@@ -52,7 +56,24 @@ const styles = {
     justifyContent: 'center',
   },
   infoWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingRight: '12px',
+  },
+  infoWrapperRight: {
     flex: 1,
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  infoWrapperRight: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  titleWrapper: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'space-between',
   }
 };
 
@@ -74,38 +95,31 @@ const CardComponent = (props) => {
               />
             }
             <CardContent>
-              <Typography gutterBottom variant="headline" component="h2">
-                {poi.name}
-              </Typography>
+              <div className={classes.titleWrapper}>
+                <Typography gutterBottom variant="headline" component="h2">
+                  {poi.name}
+                </Typography>
+                <span>{poi.userFavorited ? <FavoriteIcon /> : <FavoriteBorderIcon />}</span>
+              </div>
               <Typography component="p">
                 {poi.shortDescription}
               </Typography>
-              <Typography component="p">
-                -- {poi.id}
-                -- {poi.waitingTime}
-                -- FAV: {poi.userFavorited.toString()}
-              </Typography>
+            </CardContent>
+            <CardContent className={classes.bottomInfo}>
+              <div className={classes.infoWrapper} >
+                <DirectionsWalkIcon /> {poi.userWalkingDistance} min
+              </div>
+              {!!poi.estimatedActivityTime && (
+                <div className={classes.infoWrapper} >
+                  <UpdateIcon /> {poi.estimatedActivityTime} min
+                </div>
+              )}
+              <div className={classes.infoWrapperRight} >
+                <WaitingTimeIcon time={poi.waitingTime} />
+              </div>
             </CardContent>
           </CardActionArea>
         </Link>
-        <CardContent className={classes.bottomInfo}>
-          <div className={classes.infoWrapper} >
-            <DirectionsWalkIcon /> {poi.userWalkingDistance} min
-          </div>
-          {!!poi.estimatedActivityTime && (
-            <div className={classes.infoWrapper} >
-              <UpdateIcon /> {poi.estimatedActivityTime} min
-            </div>
-          )}
-          <div className={classes.infoWrapper} >
-            <UpdateIcon /> {poi.waitingTime} min
-          </div>
-        </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
-        </CardActions>
       </Card>
     </div>
   );
