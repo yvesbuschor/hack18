@@ -7,6 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -32,6 +33,10 @@ const styles = {
     marginRight: -12,
     marginLeft: 20,
   },
+  appName: {
+    color: 'white',
+    textDecoration: 'none',
+  }
 };
 
 class AppBarComponent extends React.Component {
@@ -50,7 +55,7 @@ class AppBarComponent extends React.Component {
 
   render() {
     const { anchorEl } = this.state;
-    const { classes, toggleDrawer, withSecondaryMenu = false } = this.props;
+    const { classes, toggleDrawer, withSecondaryMenu = false, backFunction = null } = this.props;
     const isMenuOpen = Boolean(anchorEl);
 
     const renderMenu = (
@@ -80,11 +85,11 @@ class AppBarComponent extends React.Component {
       <div className={classes.root}>
         <AppBar position="fixed">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" onClick={toggleDrawer}>
-              <MenuIcon />
+            <IconButton className={classes.menuButton} color="inherit" onClick={backFunction ? backFunction : toggleDrawer}>
+              {backFunction ? <ArrowBackIcon /> : <MenuIcon />}
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.grow}>
-              <Link to={routes.root}>CERN Open Days</Link>
+              <Link to={routes.root} className={classes.appName}>CERN Open Days</Link>
             </Typography>
             {withSecondaryMenu && (
               <IconButton className={classes.rightMenuButton} color="inherit" onClick={this.handleMenuOpen}>
