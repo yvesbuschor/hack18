@@ -1,7 +1,10 @@
 const routes = {
   root: "/",
   playground: "/playground",
-  detail: "/detail/:id"
+  price: "/price",
+  detail: "/detail/:id",
+  scan: "/scan",
+  staff: "/staff",
 };
 
 export default routes;

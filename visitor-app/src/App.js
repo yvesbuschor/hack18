@@ -5,8 +5,11 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 import Playground from './Scenes/Playground';
+import Price from './Scenes/Price';
 import List from './Scenes/List';
 import Detail from './Scenes/Detail';
+import Scan from './Scenes/Scan';
+import Staff from './Scenes/Staff';
 
 const AppContext = React.createContext({});
 
@@ -33,7 +36,10 @@ class App extends React.Component {
           <AppProvider value={this.state} >
             <Route exact path={routes.root} component={List}/>
             <Route path={routes.playground} component={Playground}/>
+            <Route path={routes.price} component={Price}/>
             <Route path={routes.detail} component={Detail}/>
+            <Route path={routes.scan} component={Scan}/>
+            <Route path={routes.staff} component={Staff}/>
           </AppProvider>
         </ApolloProvider>
       </Router>
