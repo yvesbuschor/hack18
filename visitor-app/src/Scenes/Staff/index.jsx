@@ -97,7 +97,7 @@ class Test extends Component {
   }
   }
 
-const Playground = () => (
+const Staff = () => (
   <React.Fragment>
     <AppBar />
     <Card>
@@ -108,4 +108,4 @@ const Playground = () => (
   </React.Fragment>
 );
 
-export default Playground;
+export default Staff;
