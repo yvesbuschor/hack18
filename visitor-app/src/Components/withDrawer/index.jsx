@@ -15,6 +15,10 @@ const styles = {
   fullList: {
     width: 'auto',
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  }
 };
 
 export default function withDrawer(WrappedComponent) {
@@ -44,10 +48,10 @@ export default function withDrawer(WrappedComponent) {
               <div className={classes.list}>
                 <List>
                   <ListItem button>
-                    <Link to={routes.root}><ListItemText primary="Exhibits" /></Link>
+                    <Link className={classes.link} to={routes.root}><ListItemText primary="Exhibits" /></Link>
                   </ListItem>
                   <ListItem button>
-                    <Link to={routes.playground}><ListItemText primary="Map" /></Link>
+                    <Link className={classes.link} to={routes.scan}><ListItemText primary="Scan QR Code" /></Link>
                   </ListItem>
                 </List>
               </div>

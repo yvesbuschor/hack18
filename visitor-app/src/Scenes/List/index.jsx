@@ -5,7 +5,9 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { withStyles } from '@material-ui/core/styles';
 import WarningIcon from '@material-ui/icons/Warning';
+import CameraEnhanceIcon from '@material-ui/icons/CameraEnhance';
 import red from '@material-ui/core/colors/red';
+import Button from '@material-ui/core/Button';
 import AppBar from 'Components/AppBar';
 import LoadingBar from 'Components/LoadingBar';
 import Card from './components/Card';
@@ -22,7 +24,14 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  }
+  },
+  floatButton: {
+    textDecoration: 'none',
+    color: 'inherit',
+    position: 'fixed',
+    bottom: '48px',
+    right: '48px',
+  },
 };
 
 const ListView = (props) => (
@@ -65,6 +74,11 @@ const ListView = (props) => (
             <Card key={poi.id} poi={poi} />
           ))}
           </div>
+          <Link className={props.classes.floatButton} to={routes.scan}>
+            <Button variant="fab" color="primary">
+              <CameraEnhanceIcon />
+            </Button>
+          </Link>
         </React.Fragment>
       )
     }}
