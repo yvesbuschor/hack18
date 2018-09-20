@@ -1,0 +1,33 @@
+version: '3'
+services:
+  shell:
+    build: ./visitor-app-backend
+    image: hackzurich18-backend:local
+    command: pipenv shell
+    volumes:
+      - ./visitor-app-backend:/app
+  format:
+    image: jbbarth/black
+    command: .
+    volumes:
+      - ./visitor-app-backend:/code
+  backend:
+    build: ./visitor-app-backend
+    image: hackzurich18-backend:local
+    command: pipenv run python -m server
+    volumes:
+      - ./visitor-app-backend:/app
+    ports:
+      - "8084:8084"
+  frontend:
+    environment:
+      - REACT_APP_GRAPHQL=http://127.0.0.1:8084/graphql
+    build: ./visitor-app
+    image: hackzurich18-frontend:local
+    command: yarn start
+    volumes:
+      - ./visitor-app:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

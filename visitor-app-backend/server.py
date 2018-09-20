@@ -9,76 +9,86 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+# point of interest
+# without usable content
 blacklist = [
-    'point_2',
-    'point_21',
-    'point_22',
-    'point_23',
-    'point_26',
-    'point_27',
-    'point_28',
-    'point_29',
-    'point_30',
-    'point_32',
-    'point_50'
+    "point_2",
+    "point_21",
+    "point_22",
+    "point_23",
+    "point_26",
+    "point_27",
+    "point_28",
+    "point_29",
+    "point_30",
+    "point_32",
+    "point_50",
 ]
 
-with open('data.json', 'r') as fd:
+with open("data.json", "r") as fd:
     data = {
-        row['id']: row for row in json.loads(fd.read())['rows']
-        if row['id'] not in blacklist
+        row["id"]: row
+        for row in json.loads(fd.read())["rows"]
+        if row["id"] not in blacklist
     }
 
 
 def get_point_of_interest_from_row(row):
 
-    id = row['id']
-    name = row['value']['name']['en']
-    description = row['value']['description']['text']['en']
+    id = row["id"]
+    name = row["value"]["name"]["en"]
+    description = row["value"]["description"]["text"]["en"]
 
     # geolocation
-    longitude = row['value']['geo']['lon']
-    latitude = row['value']['geo']['lat']
-    site = row['value']['geo']['site']['name']
+    longitude = row["value"]["geo"]["lon"]
+    latitude = row["value"]["geo"]["lat"]
+    site = row["value"]["geo"]["site"]["name"]
 
     # categories
-    category = row['value']['category']['name']
-    subcategory = row['value']['subcategory']['name']
+    category = row["value"]["category"]["name"]
+    subcategory = row["value"]["subcategory"]["name"]
 
     # images
-    image1 = row['value']['images']['1']
-    image2 = row['value']['images']['2']
-    image3 = row['value']['images']['3']
+    image1 = row["value"]["images"]["1"]
+    image2 = row["value"]["images"]["2"]
+    image3 = row["value"]["images"]["3"]
 
     # times
-    estimated_activity_time = row['value']['estimated_activity_time']
-    waiting_time = row['value']['waiting_time']
-    capacity_usage = row['value']['capacity_usage']
+    estimated_activity_time = row["value"]["estimated_activity_time"]
+    waiting_time = row["value"]["waiting_time"]
+    capacity_usage = row["value"]["capacity_usage"]
 
     # misc
-    opened = row['value']['opened'] == 'Y'
-    affluence = row['value']['affluence']
+    opened = row["value"]["opened"] == "Y"
+    affluence = row["value"]["affluence"]
 
     # restrictions
-    restriction_reduce_mobility = row['value']['restrictions']['reduced_mobility'] == 'Y'
-    restriction_minimum_age = row['value']['restrictions']['minimum_age']
-    restriction_children = row['value']['restrictions']['children'] == 'Y'
-    restrictions_open_saturday = row['value']['restrictions']['open_saturday'] == 'Y'
-    restrictions_open_sunday = row['value']['restrictions']['open_sunday'] == 'Y'
+    restriction_reduce_mobility = (
+        row["value"]["restrictions"]["reduced_mobility"] == "Y"
+    )
+    restriction_minimum_age = row["value"]["restrictions"]["minimum_age"]
+    restriction_children = row["value"]["restrictions"]["children"] == "Y"
+    restrictions_open_saturday = row["value"]["restrictions"]["open_saturday"] == "Y"
+    restrictions_open_sunday = row["value"]["restrictions"]["open_sunday"] == "Y"
 
     # our own stuff
-    user_walking_distance = row['value']['user']['walking_distance']
-    user_favorited = row['value']['user']['favorited']
+    user_walking_distance = row["value"]["user"]["walking_distance"]
+    user_favorited = row["value"]["user"]["favorited"]
 
-    short_description = '. '.join(row['value']['description']['text']['en'].split('.')[:1])
+    short_description = ". ".join(
+        row["value"]["description"]["text"]["en"].split(".")[:1]
+    )
 
     review = [
-        Review(id=r['id'], name=r['name'], text=r['text'], image_url=r['image_url'], stars=r['stars'])
-        for r in row['value']['user']['review']
+        Review(
+            id=r["id"],
+            name=r["name"],
+            text=r["text"],
+            image_url=r["image_url"],
+            stars=r["stars"],
+        )
+        for r in row["value"]["user"]["review"]
     ]
-
-    # TODO
-    # - videos
 
     return PointOfInterest(
         id=id,
@@ -105,7 +115,7 @@ def get_point_of_interest_from_row(row):
         user_walking_distance=user_walking_distance,
         user_favorited=user_favorited,
         short_description=short_description,
-        review=review
+        review=review,
     )
 
 
@@ -119,21 +129,23 @@ def get_point_of_interest_row(id):
 
 
 def update_point_of_interest_waiting_time(id, time):
-    data[id]['value']['waiting_time'] = time
+    data[id]["value"]["waiting_time"] = time
 
 
 def update_point_of_interest_user_favorited(id, favorited):
-    data[id]['value']['user']['favorited'] = favorited
+    data[id]["value"]["user"]["favorited"] = favorited
 
 
 def append_point_of_interest_review(id, review):
-    data[id]['value']['user']['review'].append({
-        'id': review.id,
-        'name': review.name,
-        'image_url': review.image_url,
-        'stars': review.stars,
-        'text': review.text,
-    })
+    data[id]["value"]["user"]["review"].append(
+        {
+            "id": review.id,
+            "name": review.name,
+            "image_url": review.image_url,
+            "stars": review.stars,
+            "text": review.text,
+        }
+    )
 
 
 class PointOfInterest(graphene.ObjectType):
@@ -192,17 +204,23 @@ class Review(graphene.ObjectType):
 class Query(graphene.ObjectType):
 
     point_of_interest = graphene.List(
-        PointOfInterest,
-        id=graphene.String(),
-        name=graphene.String(),
+        PointOfInterest, id=graphene.String(), name=graphene.String()
     )
 
     def resolve_point_of_interest(self, info, id=None, name=None):
         if id:
-            return [get_point_of_interest_from_row(row) for row in data.values() if id == row['id']]
+            return [
+                get_point_of_interest_from_row(row)
+                for row in data.values()
+                if id == row["id"]
+            ]
 
         if name:
-            return [get_point_of_interest_from_row(row) for row in data.values() if name in row['value']['name']['en']]
+            return [
+                get_point_of_interest_from_row(row)
+                for row in data.values()
+                if name in row["value"]["name"]["en"]
+            ]
 
         return [get_point_of_interest_from_row(row) for row in data.values()]
 
@@ -224,7 +242,7 @@ class UpdatePointOfInterest(graphene.Mutation):
                 update_point_of_interest_waiting_time(id, waiting_time)
             if user_favorited is not None:
                 update_point_of_interest_user_favorited(id, user_favorited)
-        except:
+        except Exception as e:
             ok = False
 
         return UpdatePointOfInterest(
@@ -245,7 +263,13 @@ class CreateReview(graphene.Mutation):
 
     def mutate(self, info, point_id, name, image_url, stars, text):
         ok = True
-        review = Review(id=str(datetime.now()), name=name, image_url=image_url, stars=stars, text=text)
+        review = Review(
+            id=str(datetime.now()),
+            name=name,
+            image_url=image_url,
+            stars=stars,
+            text=text,
+        )
         append_point_of_interest_review(point_id, review)
         return CreateReview(ok=ok, review=review)
 
@@ -256,16 +280,15 @@ class Mutation(graphene.ObjectType):
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
-app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=schema, graphiql=True))
+app.add_url_rule(
+    "/graphql", view_func=GraphQLView.as_view("graphql", schema=schema, graphiql=True)
+)
 
 
 @app.route("/")
 def health():
-    return "Hello World!"
+    return "✓"
 
 
-# Optional, for adding batch query support (used in Apollo-Client)
-# app.add_url_rule('/graphql/batch', view_func=GraphQLView.as_view('graphql', schema=schema, batch=True))
-
-port = int(os.environ.get('PORT', 8084))
-app.run(host='0.0.0.0', port=port)
+port = int(os.environ.get("PORT", 8084))
+app.run(host="0.0.0.0", port=port)
