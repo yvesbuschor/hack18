@@ -6,7 +6,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+
 
 const styles = {
   list: {
@@ -47,12 +50,24 @@ export default function withDrawer(WrappedComponent) {
               >
               <div className={classes.list}>
                 <List>
-                  <ListItem button>
-                    <Link className={classes.link} to={routes.root}><ListItemText primary="Exhibits" /></Link>
-                  </ListItem>
-                  <ListItem button>
-                    <Link className={classes.link} to={routes.scan}><ListItemText primary="Scan QR Code" /></Link>
-                  </ListItem>
+                  <Link className={classes.link} to={routes.root}>
+                    <ListItem button>
+                      <ListItemText primary="Exhibits" />
+                    </ListItem>
+                  </Link>
+                  <Link className={classes.link} to={routes.scan}>
+                    <ListItem button>
+                      <ListItemText primary="Scan QR Code" />
+                    </ListItem>
+                  </Link>
+                  <Link className={classes.link} to={routes.staff}>
+                    <ListItem button>
+                        <ListItemIcon>
+                          <AssignmentIndIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="STAFF" />
+                    </ListItem>
+                  </Link>
                 </List>
               </div>
             </div>
