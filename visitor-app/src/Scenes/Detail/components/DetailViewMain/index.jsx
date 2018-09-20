@@ -22,6 +22,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import WaitingTimeIcon from 'Components/WaitingTimeIcon';
+import StarIcon from '@material-ui/icons/Star';
+import AddReview from '../AddReview';
 
 
 
@@ -124,8 +126,9 @@ const DetailViewMain = (props) => {
         <Typography gutterBottom variant="headline" component="h2">
           Reviews
         </Typography>
+        <AddReview pointId={poi.id} />
         {
-          poi.review.length > 0 && poi.review.map((rev) => (
+          poi.review.length > 0 && poi.review.reverse().map((rev) => (
             <Card className={classes.reviewCard} key={rev.id}>
               <CardHeader
                 avatar={
@@ -140,6 +143,13 @@ const DetailViewMain = (props) => {
                 subheader={rev.id.substring(0,10)}
               />
               <CardContent>
+                <Typography component="p">
+                  { rev.stars >= 1 ? <StarIcon /> : null }
+                  { rev.stars >= 2 ? <StarIcon /> : null }
+                  { rev.stars >= 3 ? <StarIcon /> : null }
+                  { rev.stars >= 4 ? <StarIcon /> : null }
+                  { rev.stars >= 5 ? <StarIcon /> : null }
+                </Typography>
                 <Typography component="p">
                   {rev.text}
                 </Typography>

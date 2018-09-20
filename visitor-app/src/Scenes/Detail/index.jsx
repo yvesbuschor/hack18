@@ -53,6 +53,7 @@ const GET_POI = gql`
             id
             name
             text
+            stars
             imageUrl
           }
         }
